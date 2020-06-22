@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body { 
     margin:0;
@@ -7,12 +8,19 @@ body {
 }
 
 h1, h2, h3, h4, h5 , h6 { 
-    font-family: 'Ubuntu', sans-serif; font-weight:normal;
+    font-family: 'Open Sans', sans-serif;
+    color:#5c3fff;
+
+}
+h3.categories{
+    font-weight: light;
+    color: #e76333;
+    font-size: 1.5em;
 }
 
 a {
     text-decoration:none;
-    color:#5993bb;
+    color:#5c3eee;
 }
 
 a:hover {
@@ -21,11 +29,17 @@ a:hover {
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
-    border-radius:4px;
+    background:#5c3fff;
+    border-radius:2px;
     padding:10px 20px;
     font-size:14px;
     border:0;
+}
+a.button:hover, input[type="submit"]:hover {
+    background:#fafafa;
+    border-radius:2px;
+    border: 1px solid #e76333;
+    color:#e76333;
 }
 
 a.button.light {
@@ -49,21 +63,21 @@ table {
 
 table th, table td {
     text-align:left;
-    font-size:14px;
+    font-size:18px;
     padding:10px;
     margin:0;
 }
 
-tbody tr:nth-child(odd) {
-    background:#efefef;
+tbody tr:nth-child(even) {
+    background:rgb(245, 245, 245);
 }
 
 tbody tr.subtotal {
-    background:#ccc;
+    background:rgb(255, 139, 86);
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
+    background:#e76333;
     color:#fff;
     font-weight:bold;
 }
@@ -81,7 +95,7 @@ tbody td.num {
 }
 
 td input[type="submit"] {
-    font-size:12px;
+    font-size:18px;
     padding:4px 10px;
 }
 
@@ -117,29 +131,31 @@ ul.errorlist {
 
 
 #header {
-    padding:10px 100px;
     font-size:18px;
     overflow:auto;
 }
 
 #subheader {
-    background:#ececec;
-    color:#444;
-    padding:15px 100px;
+    background:#fafafa;
+    color:#5c3eee;
+    padding:20px 100px;
     overflow:auto;
 }
 
-#header .logo {
-    font-family: 'Ubuntu', sans-serif;
-    float:left;
-    color:#333;
-    font-size:22px;
-    margin-right:10%;
+a.logo {
+    color:#5c3eee;
+    font-size:2em;
+    margin-right:2rem;
+    display: inline;
+    justify-content: space-around;
 }
 
 #subheader .cart {
+    color: #5c3eee;
     float:right;
+    display:flex;
     padding-top:4px;
+    text-transform: uppercase;
 }
 
 #content {
@@ -169,8 +185,8 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
-    border-radius:4px;
+    background:#ff6f00;
+    border-radius:2px;
 }
 
 #sidebar ul li.selected a {
@@ -202,7 +218,7 @@ ul.errorlist {
 }
 
 .product-detail .price {
-    color:#333;
+    color:#000007;
     font-size:28px;
     font-weight:bold;
 }
@@ -210,7 +226,19 @@ ul.errorlist {
 .product-detail img {
     width:40%;
     float:left;
-    padding:0 20px 20px 0;
+    /* padding:0 20px 20px 0; */
+    margin:2rem;
+    box-shadow: 0px 2px 4px;
+    background-size: cover;
+    background-position: center;
+}
+.product-detail img:hover {
+    width:50%;
+    cursor:zoom-in;
+}
+hr{
+    color:#5c3eee;
+    opacity:0.5;
 }
 
 .product-detail h1 {
@@ -220,6 +248,17 @@ ul.errorlist {
 .product-detail h2 {
     margin-top:10px;
 }
+.product-detail input{
+    background:#5c3eee;
+    color:#fffffa;
+    text-transform: capitalize;
+    border : 1px solid #fff;
+}
+.product-detail input:hover{
+    background:#fafafa;
+    color:#000007;
+    border: 1px solid #e76333;
+}
 
 .order-form {
     float:left;
@@ -228,14 +267,15 @@ ul.errorlist {
 .order-info {
     float:right;
     width:300px;
-    background:#efefef;
+    background:#fafafa;
     padding:10px 20px;
-    color:#333;
-    border-bottom:4px solid #5993bb;
+    color:#000007;
+    border-bottom:4px solid #e76333;
+    box-shadow: 0px 4px 8px #e76333;
 }
 
 .order-info h3 {
-    color:#5993bb;
+    color:#e76333;
 }
 
 .order-info ul li {
@@ -327,4 +367,24 @@ form div.field {
     background:#efefef;
     color:#666;
     border-radius:4px;
+}
+.product_name{
+    color:#e76333;
+}
+
+h1.shopping-cart{
+    color:#5c3fff;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+#id_first_name, #id_last_name, #id_email, #id_address, #id_postal_code, #id_city{
+    border-bottom:2px solid #e76333;
+    background:#fff;
+    border-radius:0px ;
+    padding: 0.5em;
+}
+.order-form > p{
+    color:#000007;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
 }
